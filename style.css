@@ -1,0 +1,68 @@
+.list{
+    padding: 0px;
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3,fr);
+    grid-template-rows: repeat(5, 60px);
+
+    column-gap: 50px;
+
+    /* border: 1px solid blue; */
+
+    width: fit-content;
+}
+
+.list-element{
+    padding: 5px;
+    /* border: 1px solid red; */
+
+    display: grid;
+    grid-template-columns: 50px 100px 20px;
+
+    overflow-wrap: break-word;
+
+    gap: 10px;
+}
+
+.list-element .delete.icon{
+    width: 50px;
+}
+.list-element .arrow{
+    width: 20px;
+}
+
+.list-element .arrows{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+img.arrow.up{
+    transform: rotate(90deg);
+}
+
+img.arrow.down{
+    transform: rotate(-90deg);
+}
+
+.list-element *{
+    /* border: 1px solid black; */
+}
+
+.list .list-element:first-child .arrows .arrow.up{
+    visibility: hidden;
+}
+.list .list-element:last-child .arrows .arrow.down{
+    visibility: hidden;
+}
+
+.arrow:active{
+    content: url("./pictures/arrow-clicked.png");
+}
+
+.delete:active{
+    content: url("./pictures/delete-clicked.png");
+}
